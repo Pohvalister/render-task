@@ -1,0 +1,15 @@
+# !/bin/bash
+
+project_name=RenderTask
+files_folder=tmp
+
+if ! [ -d ./$files_folder/ ]; then
+echo 'Files will be generated in '$files_folder
+mkdir $files_folder
+fi
+
+cd $files_folder
+cmake ..
+make
+
+./$project_name
